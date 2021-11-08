@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<hmtl>
+    <head>
+        <title>LOGIN</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimun-scale=1">                                
+        <script type="text/javascript" src="JS/fontawesome.min.js"></script>        
+        <link rel="stylesheet" type="text/css" href= "CSS/estilo.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">         
+    </head>
+    <body>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check">
+                <i class="fas fa-bars" id="btn"></i>
+                <i class="fas fa-times" id="cancel"></i>
+            </label>
+            
+            <img src="img/ShopBag.svg">
+            
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </nav>
+        <img class="wave" src="img/wave.png">
+         <div id="container" class="container"> <!--essa classe do css é um grid -->
+            <div class="img"> <!-- coluna 1 do grid-->
+                <img src="img/bg.svg">
+            </div>
+            <div class="login-content"> <!-- coluna 2 do grid-->
+                <form action="index.html">
+                    <img src="img/avatar.svg">
+                    <h2 class="title">bem-vindo</h2>
+                <div class="input-div one">
+                    <div class="icone">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Usuário</h5>
+                        <input id="inputLogin" type="text" class="input">
+                    </div>
+
+                </div>
+                <div class="input-div pass">
+                    <div class="icone">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class= "div">
+                        <h5>Senha</h5>
+                        <input type="password" class="input">
+                    </div>
+
+                </div>
+                <input type="submit" class="btn" value ="Login">
+                </form>
+            </div>
+        </div>
+
+    </body>
+</hmtl>
+</html>

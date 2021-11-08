@@ -1,0 +1,336 @@
+*{
+	margin:0;
+    padding:0;
+    box-sizing: border-box; /* oque é */
+    text-decoration: none;
+    list-style: none;
+    
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    
+}
+
+nav{
+    height: 80px;
+    background: #2c3e50;    
+}
+
+
+nav img{
+    height: 80px;    
+    position: relative;
+    top: 0%;    
+    left: 12%;
+}
+
+
+nav ul{
+    float: right;
+    margin-right: 25px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 15px;
+}
+
+nav ul li a{
+    position: relative;
+    color:white;
+    font-size: 0.8rem;
+    padding:5px 0;
+    text-transform: uppercase;
+}
+
+nav ul li a:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: white;
+    transform:scaleX(0);
+    transform-origin: right;
+    transition: transform .4s linear;
+}
+
+
+nav ul li a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+label #btn,
+label #cancel{
+    color:white;
+    font-size:30px;
+    float: right;
+    line-height: 80px;
+    margin-right:40px;
+    cursor: pointer;
+    display: none;
+}
+
+
+#check{
+    display: none;
+}
+
+
+.photo{
+    width: 100%;
+    height: 150px;
+    padding: 0.5rem;
+    object-fit: cover;
+}
+
+
+.wave{
+	position: fixed; /*fixa a wave no local correto */
+	bottom: 0;
+	left: 0;
+	height: 50%; /*altura em porcentagem para deixar padrão*/
+	
+}
+
+.container{
+    width: 100vw; /*width relativo do tela */
+    height: 100vh; /*height relativo do tela */
+    display: grid; /*mostrar em formato de grid*/
+    grid-template-columns: 1fr 1fr; /*jeito que mostra as colunas*/
+                                    /*fr mostra o tamanho proporcional da tela*/ 
+    grid-gap :7rem; /*Tamanho dos espaçamentos*/
+                    /*REM = relativo ao tamanho da fonte do html*/
+    padding: 0 2rem; /* padding em y e padding e x*/
+}
+
+.img{
+	display: flex; /*organiza em forma de container*/
+	justify-content: flex-end; /*coloca a imagem no fim da coluna*/    
+}
+
+.login-content{
+	display: flex; /*organiza em forma de container*/
+	justify-content: flex-start; /*coloca a imagem no inicio da coluna*/
+	align-items: center; /*alinha os itens com seu centro */
+	text-align: center; /*alinha os textos com seu centro */
+}
+
+.img img{
+	width: 500px; /*estilo da imagem da primeira coluna*/
+}
+
+
+form{
+	width: 360px; /* estilo do formulario de login */
+}
+
+.login-content img{     /*estilo da imagem do avatar*/
+    height: 100px;
+}
+
+.login-content h2{ /* estilo do bem vindo */
+	margin: 15px 0;
+	color: #333;
+	text-transform: uppercase;
+	font-size: 3rem; /* 3 vezes tamanho padrao da fonte */
+}
+
+.login-content .input-div{
+	position: relative;    
+    display: grid;
+    grid-template-columns: 5% 93%;
+    margin: 25px 0;
+    padding: 5px 0;
+    border-bottom: 2px solid #d9d9d9;
+}
+
+.login-content .input-div.one{
+	margin-top: 0
+}
+
+.icone{
+	color: #d9d9d9;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.icone i{
+	transition: .3s;
+}
+
+.input-div > div{
+    position: relative;
+	height: 45px;
+}
+
+.input-div > div > h5{
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #999;
+	font-size: 18px;
+	transition: .3s;
+}
+
+.input-div:before, .input-div:after{
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	width: 0%;
+	height: 2px;
+	background-color: #38d39f;
+	transition: .4s;
+}
+
+.input-div:before{
+	right: 50%;
+}
+
+.input-div:after{
+	left: 50%;
+}
+
+.input-div:focus-within::before, .input-div:focus-within::after{
+	width: 50%;
+}
+
+.input-div:focus-within > div > h5{
+	top: -5px;
+	font-size: 15px;	
+}
+
+.input-div:focus-within > .i > i{
+	color: #38d39f;
+}
+
+.input-div > div > input{
+	position: absolute;	
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+	outline: none;
+	background: none;
+	padding: 0.5rem 0.7rem;
+	font-size: 1.2rem;
+	color: #555;
+	font-family: 'poppins', sans-serif;
+}
+
+.input-div.pass{
+	margin-bottom: 4px;
+}
+
+
+.btn{
+	display: block;
+	width: 100%;
+	height: 50px;
+	border-radius: 25px;
+	outline: none;
+	border: none;
+	background-image: linear-gradient(to right, #32be8f, #1d30db, #be32b7);
+	background-size: 250%;
+	font-size: 20px;
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+	text-transform: uppercase;
+	margin: 2rem 0;
+	cursor: pointer;
+	transition: .5s;
+}
+.btn:hover{
+	background-position:right;
+}
+
+
+@media screen and (max-width: 1050px){
+	.container{
+		grid-gap: 5rem;
+	}
+	nav img{
+		left: 8%;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	form{
+		width: 290px;
+	}
+
+	.login-content h2{
+        font-size: 2.4rem;
+        margin: 8px 0;
+	}
+
+	.img img{        
+		width: 400px;
+	}
+}
+
+@media screen and (max-width: 900px){
+	.container{
+		grid-template-columns: 1fr;
+	}
+
+	.img{
+		display: none;
+	}
+
+	.wave{
+		display: none;
+	}
+
+	.login-content{
+		justify-content: center;
+	}
+	label #btn{
+		display:block;
+		margin: 20px;
+	}
+	ul{
+		z-index: 100; 
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: #34495e;
+		top:80px;
+		left: -100%;
+		text-align: center;
+		transition: all .5s;
+	}
+	nav ul li{
+		display: block;
+		margin:50px 0;
+		line-height: 30px;
+	}
+	 nav ul li a{
+		 font-size: 20px;
+	 }	 
+ 
+	 #check:checked ~ ul{
+		 left: 0;
+	 }
+ 
+	  #check:checked ~ label #btn{
+		 display:none;
+	 }
+
+	 #check:checked  input {
+		display: none;
+	}
+ 
+	 #check:checked ~ label #cancel{
+		display:block;
+		margin: 20px;		
+	 }
+}
