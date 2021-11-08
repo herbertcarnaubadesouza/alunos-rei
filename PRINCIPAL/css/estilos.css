@@ -50,6 +50,11 @@ body, html{
     margin: 0 30px;    
 }
 
+.nav-links li a{
+    color:white;
+    text-decoration: none;
+}
+
 
 header{
     padding: 0;

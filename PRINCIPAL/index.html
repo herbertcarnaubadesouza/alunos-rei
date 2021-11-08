@@ -11,14 +11,14 @@
     <body>
         <!-- MENU -->
         <nav class="navbar">            
-            <img class="logo" src="img/ShopBag.svg">        
+            <img class="logo" src="img/ShopBag.svg">                   
             <ul class="nav-links" id="nav-links">
-                <li class="active"><a href="#"></a>Home</li>
-                <li><a href="#"></a>About</li>
-                <li><a href="#"></a>Services</li>
-                <li><a href="#"></a>Contact</li>
-                <li><a href="#"></a>Feedback</li>
-                <li class="ctn"><a href="#"></a>CONTACT</li>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="../LOGIN/index.html">Login</a></li>
+                <li><a href="../MaisProdutos/index.html">Produtos</a></li>
+                <li><a href="../COMPRA/index.html">Carrinho</a></li>
+                <li><a href="../CADASTRO/index.html">Cadastro</a></li>
+                <li class="ctn"><a href="#">CONTACT</a></li>
             </ul>
             <img src="img/menu-btn.png" id="menu-btn" class="menu-btn">
         </nav>
@@ -81,7 +81,7 @@
                     <div class="line"></div>
                 </div>             
                 <form class="form" name="name">
-                    <textarea class="field" name="mesage" placeholder="Deixe alguma sugestão"></textarea>
+                    <textarea class="field" name="mesage" placeholder="Deixe alguma sugestão" required></textarea>
                     <input type="submit" class="btn-form" value="Enviar">
                 </form>
             </div>
@@ -96,10 +96,10 @@
                 <div class="contact-form">
                     <h1>Entre em contato</h1>
                     <form>
-                        <input type="text" placeholder="Nome" class="contact-form-txt"/>
-                        <input type="text" placeholder="Email" class="contact-form-txt"/>
-                        <textarea placeholder="Mensagem" class="contact-form-txtarea"></textarea>
-                        <input type="submit" name="Submit" class="contact-form-btn"/>
+                        <input type="text" placeholder="Nome" class="contact-form-txt" required/>
+                        <input type="text" placeholder="Email" class="contact-form-txt" required/>
+                        <textarea placeholder="Mensagem" class="contact-form-txtarea" required></textarea>
+                        <input type="submit" name="Submit" class="contact-form-btn" required/>
                     </form>
                 </div>
             </div>
