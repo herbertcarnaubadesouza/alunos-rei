@@ -1,0 +1,269 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box; /* oque é */
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background: lightblue;
+    font-family: sans-serif;
+}
+
+.container{
+    margin: auto;
+    justify-content: content;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 40px;
+    padding:20px;
+
+}
+
+.card{
+    background: white;
+    padding: 15px 15px 40px;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0,0.3);
+    border-radius: 20px;
+}
+
+.photo{
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius:20px;
+    height: 300px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.legenda > h2{
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.legenda > p{
+    margin-bottom: 1rem;
+}
+
+.card > button{    
+    background: royalblue;
+    border-radius: 20px;
+    border: none;            
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    background-image: linear-gradient(to right, #32be8f, #1d30db, #be32b7);
+	background-size: 250%;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor:pointer;
+}
+
+.card > button:hover{
+	background-position:right;
+}
+
+
+.card > button.comprado{
+    background: green;
+}
+
+.Titulo{
+    margin-top: 3%;
+    margin-bottom: 3%;
+    left: 25%;
+    position:relative;
+    color: lightblue;
+    font-size: 5vw;    
+    -webkit-text-stroke: 0.3vw lightblue;
+    text-transform: uppercase;
+}
+
+
+.Titulo-vazio{
+    margin-top: 3%;
+    margin-bottom: 3%;
+    left: 25%;
+    position:relative;
+    color: lightblue;
+    font-size: 5vw;    
+    -webkit-text-stroke: 0.3vw lightblue;
+    text-transform: uppercase;
+}
+
+.Titulo::before{
+
+    content: attr(data-text);
+    position:absolute;
+    top:0;    
+    width: 0;
+    height: 100%;
+    color: #2c3e50;
+    -webkit-text-stroke: 0vw #383d52;
+    border-right : 2px solid #2c3e50;
+    overflow:hidden;
+    animation: animate 6s linear infinite;
+}
+
+
+
+.Titulo-vazio::before{
+
+    content: attr(data-text);
+    position:absolute;
+    top:0;    
+    width: 0;
+    height: 100%;
+    color: #2c3e50;
+    -webkit-text-stroke: 0vw #383d52;
+    border-right : 2px solid #2c3e50;
+    overflow:hidden;
+    animation: animate 6s linear infinite;
+}
+
+
+@keyframes animate{
+    0%,10%,100%{
+        width: 0;
+    }
+    70%, 90%{
+        width: 100%;
+    }
+}
+
+
+#tabelaCarrinho{
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+
+
+nav{
+    height: 80px;
+    background: #2c3e50;    
+}
+
+
+nav img{
+    height: 80px;    
+    position: relative;
+    top: 0%;    
+    left: 12%;
+}
+
+
+nav ul{
+    float: right;
+    margin-right: 25px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 15px;
+}
+
+nav ul li a{
+    position: relative;
+    color:white;
+    font-size: 0.8rem;
+    padding:5px 0;
+    text-transform: uppercase;
+}
+
+nav ul li a:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: white;
+    transform:scaleX(0);
+    transform-origin: right;
+    transition: transform .4s linear;
+}
+
+
+nav ul li a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+label #btn,
+label #cancel{
+    color:white;
+    font-size:30px;
+    float: right;
+    line-height: 80px;
+    margin-right:40px;
+    cursor: pointer;
+    display: none;
+}
+
+
+#check{
+    display: none;
+}
+
+
+.photo{
+    width: 100%;
+    height: 150px;
+    padding: 0.5rem;
+    object-fit: cover;
+}
+
+
+
+
+
+
+@media (max-width: 1118px){
+    nav img{
+        left: 8%;
+    }
+}
+
+
+@media (max-width: 860px){
+   label #btn{
+       display:block;
+   }
+   ul{
+       position: fixed;
+       width: 100%;
+       height: 100vh;
+       background: #34495e;
+       top:80px;
+       left: -100%;
+       text-align: center;
+       transition: all .5s;
+   }
+   nav ul li{
+       display: block;
+       margin:50px 0;
+       line-height: 30px;
+   }
+    nav ul li a{
+        font-size: 20px;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+     #check:checked ~ label #btn{
+        display:none;
+    }
+
+    #check:checked ~ label #cancel{
+        display:block;
+    }
+
+}
