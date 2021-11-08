@@ -148,10 +148,11 @@ nav{
     background: #2c3e50;    
 }
 
+
 nav img{
-    width: 300px;
-    position: absolute;
-    top: -19%;    
+    height: 80px;    
+    position: relative;
+    top: 0%;    
     left: 12%;
 }
 
