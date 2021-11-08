@@ -1,49 +1,40 @@
 <!DOCTYPE html>
 <hmtl>
     <head>
-        <title>LOGIN</title>
+        <title>CADASTRO</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimun-scale=1">                                
-        <link rel="stylesheet" type="text/css" href= "css/fontawesome.min.css">
-        <link rel="stylesheet" type="text/css" href= "css/estilos.css">
+        <link rel="stylesheet" type="text/css" href= "CSS/estilo.css">
         <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">         
-        <script src="https://kit.fontawesome.com/a81368914c.js"></script>
     </head>
     <body>
-        <img class="wave" src="img/wave.png">
-         <div class="container"> <!--essa classe do css é um grid -->
-            <div class="img"> <!-- coluna 1 do grid-->
-                <img src="img/bg.svg">
+        <div class="container">
+          <h2>Cadastro</h2>
+          <form action="#">
+            <div class="input-box">
+              <input type="text" placeholder="Digite seu nome" required>
             </div>
-            <div class="login-content"> <!-- coluna 2 do grid-->
-                <form action="index.html">
-                    <img src="img/avatar.svg">
-                    <h2 class="title">bem-vindo</h2>
-                <div class="input-div one">
-                    <div class="icone">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="div">
-                        <h5>Usuário</h5>
-                        <input type="text" class="input">
-                    </div>
-
-                </div>
-                <div class="input-div pass">
-                    <div class="icone">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <div class= "div">
-                        <h5>Senha</h5>
-                        <input type="password" class="input">
-                    </div>
-
-                </div>
-                <input type="submit" class="btn" value ="Login">
-                </form>
+            <div class="input-box">
+              <input type="text" placeholder="Digite seu email" required>
             </div>
+            <div class="input-box">
+              <input type="password" placeholder="Crie uma senha" required>
+            </div>
+            <div class="input-box">
+              <input type="password" placeholder="Confirme sua senha" required>
+            </div>
+            <div class="policy">
+              <input type="checkbox">
+              <h3>Eu aceito todos os termos & condições</h3>
+            </div>
+            <div class="input-box button">
+              <input type="Submit" value="CADASTRE">
+            </div>
+            <div class="text">
+              <h3>Já tem cadastro? <a href="#">Login agora</a></h3>
+            </div>
+          </form>
         </div>
-        <!-- <script type="text/javascript" src="js/fontawesome.min.js"></script>         -->
-    </body>
+      </body>
 </hmtl>
 </html>
